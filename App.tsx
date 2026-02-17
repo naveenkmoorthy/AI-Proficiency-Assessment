@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Home } from './components/Home';
 import { Quiz } from './components/Quiz';
 import { Results } from './components/Results';
@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<AssessmentResult | null>(null);
-  const [quizKey, setQuizKey] = useState(0); // Used to force-reset Quiz component
+  const [quizKey, setQuizKey] = useState(0); 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const saved = localStorage.getItem('clean-focus-theme');
     return saved ? saved === 'dark' : false;
@@ -41,7 +41,7 @@ const App: React.FC = () => {
       const fetchedQuestions = await getAssessment(selectedModule);
       setQuestions(fetchedQuestions);
       setResults(null);
-      setQuizKey(prev => prev + 1); // Reset quiz internal state
+      setQuizKey(Date.now()); // Ensure unique key for fresh state
       setView(AppView.QUIZ);
     } catch (error) {
       console.error(error);
@@ -51,7 +51,7 @@ const App: React.FC = () => {
     }
   };
 
-  const handleRestart = async () => {
+  const handleRestart = useCallback(async () => {
     if (!module) return;
     
     setLoading(true);
@@ -59,7 +59,7 @@ const App: React.FC = () => {
       const fetchedQuestions = await getAssessment(module);
       setQuestions(fetchedQuestions);
       setResults(null);
-      setQuizKey(prev => prev + 1); // Force Quiz component to remount completely
+      setQuizKey(Date.now()); // Crucial: forces Quiz to completely unmount/remount
       setView(AppView.QUIZ);
     } catch (error) {
       console.error(error);
@@ -67,7 +67,15 @@ const App: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [module]);
+
+  const handleExit = useCallback(() => {
+    setModule(null);
+    setQuestions([]);
+    setResults(null);
+    setQuizKey(0);
+    setView(AppView.HOME);
+  }, []);
 
   const handleQuizComplete = async (answers: UserAnswer[]) => {
     setLoading(true);
@@ -107,14 +115,6 @@ const App: React.FC = () => {
     }
   };
 
-  const handleExit = () => {
-    setModule(null);
-    setQuestions([]);
-    setResults(null);
-    setView(AppView.HOME);
-    setQuizKey(0);
-  };
-
   return (
     <Layout 
       onExit={handleExit} 
@@ -134,7 +134,7 @@ const App: React.FC = () => {
           {view === AppView.HOME && <Home onStart={handleStart} />}
           {view === AppView.QUIZ && questions.length > 0 && (
             <Quiz 
-              key={quizKey} // KEY PROP IS CRITICAL FOR RESTART
+              key={quizKey} 
               questions={questions} 
               onComplete={handleQuizComplete} 
               onRestart={handleRestart}
