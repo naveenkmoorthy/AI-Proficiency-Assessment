@@ -1,0 +1,219 @@
+
+{
+  "Machine Learning": [
+    {
+      "id": 1,
+      "text": "Which of the following best describes 'Overfitting' in a machine learning model?",
+      "options": [
+        {"id": "A", "text": "The model performs well on training data but poorly on unseen data."},
+        {"id": "B", "text": "The model fails to capture the underlying trend of the data entirely."},
+        {"id": "C", "text": "The model has high bias and low variance."},
+        {"id": "D", "text": "The model is too simple for the complexity of the dataset."}
+      ],
+      "correctOptionId": "A",
+      "explanation": "Overfitting occurs when a model learns the noise and details in the training data to the extent that it negatively impacts the performance of the model on new data. This usually results in high variance.",
+      "category": "Model Performance"
+    },
+    {
+      "id": 2,
+      "text": "What is the primary purpose of the 'Gradient Descent' algorithm?",
+      "options": [
+        {"id": "A", "text": "To increase the dimensionality of the input data."},
+        {"id": "B", "text": "To minimize the cost function by iteratively moving toward the minimum."},
+        {"id": "C", "text": "To classify data into discrete categories."},
+        {"id": "D", "text": "To visualize the weights of a neural network."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Gradient descent is an optimization algorithm used to minimize some function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient.",
+      "category": "Optimization"
+    },
+    {
+      "id": 3,
+      "text": "What is the key characteristic of 'Unsupervised Learning'?",
+      "options": [
+        {"id": "A", "text": "It requires a teacher to provide correct answers for every input."},
+        {"id": "B", "text": "It uses labeled datasets to train algorithms."},
+        {"id": "C", "text": "It finds hidden patterns or intrinsic structures in input data without labels."},
+        {"id": "D", "text": "It is only used for predicting continuous numeric values."}
+      ],
+      "correctOptionId": "C",
+      "explanation": "Unsupervised learning works with unlabeled data. The system doesn't know the 'right' answer but attempts to find structure or patterns, such as clustering or association.",
+      "category": "Learning Paradigms"
+    },
+    {
+      "id": 4,
+      "text": "In a Random Forest, how is the final prediction typically determined for a classification task?",
+      "options": [
+        {"id": "A", "text": "By taking the maximum value of all features."},
+        {"id": "B", "text": "By averaging the results of all decision trees."},
+        {"id": "C", "text": "By majority voting among the decision trees."},
+        {"id": "D", "text": "By selecting the prediction of the shallowest tree."}
+      ],
+      "correctOptionId": "C",
+      "explanation": "Random Forest is an ensemble method. For classification, it collects the predictions from many individual decision trees and outputs the class that received the most 'votes'.",
+      "category": "Ensemble Methods"
+    }
+  ],
+  "Natural Language Processing": [
+    {
+      "id": 5,
+      "text": "What is the role of the 'Attention' mechanism in modern Transformer models?",
+      "options": [
+        {"id": "A", "text": "It allows the model to focus on specific parts of the input sequence when producing output."},
+        {"id": "B", "text": "It speeds up the training process by reducing the number of parameters."},
+        {"id": "C", "text": "It converts text directly into pixels for image generation."},
+        {"id": "D", "text": "It acts as a filter for removing stop words automatically."}
+      ],
+      "correctOptionId": "A",
+      "explanation": "Attention mechanisms allow models to assign different levels of importance (weights) to different parts of the input, enabling the model to capture long-range dependencies in text.",
+      "category": "Architecture"
+    },
+    {
+      "id": 6,
+      "text": "Which NLP task involves identifying and categorizing entities like names, places, and dates?",
+      "options": [
+        {"id": "A", "text": "Sentiment Analysis"},
+        {"id": "B", "text": "Named Entity Recognition (NER)"},
+        {"id": "C", "text": "Machine Translation"},
+        {"id": "D", "text": "Part-of-Speech Tagging"}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Named Entity Recognition (NER) is a subtask of information extraction that seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories.",
+      "category": "Information Extraction"
+    },
+    {
+      "id": 7,
+      "text": "What do 'Word Embeddings' represent in the context of NLP?",
+      "options": [
+        {"id": "A", "text": "The literal ASCII codes of each character in a word."},
+        {"id": "B", "text": "High-dimensional vectors where similar words have similar vector representations."},
+        {"id": "C", "text": "The frequency of a word occurring in a specific document only."},
+        {"id": "D", "text": "A list of synonyms for a given word."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Word embeddings are a type of word representation that allows words with similar meanings to have a similar representation in a continuous vector space.",
+      "category": "Representations"
+    },
+    {
+      "id": 8,
+      "text": "What is 'Tokenization'?",
+      "options": [
+        {"id": "A", "text": "The process of translating text into a foreign language."},
+        {"id": "B", "text": "Breaking down text into smaller units, such as words or subwords."},
+        {"id": "C", "text": "Enciphering text for secure transmission."},
+        {"id": "D", "text": "Removing all numbers from a dataset."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tokenization is the first step in text processing where a sequence of characters is broken down into meaningful pieces called tokens.",
+      "category": "Preprocessing"
+    }
+  ],
+  "Computer Vision": [
+    {
+      "id": 9,
+      "text": "What is the primary function of a 'Convolutional Layer' in a CNN?",
+      "options": [
+        {"id": "A", "text": "To flatten the image into a 1D vector immediately."},
+        {"id": "B", "text": "To automatically detect spatial features like edges and textures through filters."},
+        {"id": "C", "text": "To serve as the final classification layer."},
+        {"id": "D", "text": "To increase the brightness of the input image."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Convolutional layers apply various filters to the input image to extract features. Early layers find simple features (edges), while deeper layers find complex objects.",
+      "category": "CNN Architecture"
+    },
+    {
+      "id": 10,
+      "text": "Why is 'Data Augmentation' frequently used in computer vision tasks?",
+      "options": [
+        {"id": "A", "text": "To reduce the size of the training dataset for faster training."},
+        {"id": "B", "text": "To increase the diversity of training data without collecting new images."},
+        {"id": "C", "text": "To manually label unlabeled images using AI."},
+        {"id": "D", "text": "To improve the resolution of the input images."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Data augmentation creates new training samples by applying transformations (rotation, flipping, scaling) to existing images, helping models generalize better.",
+      "category": "Training Techniques"
+    },
+    {
+      "id": 11,
+      "text": "What is 'Pooling' typically used for in a neural network?",
+      "options": [
+        {"id": "A", "text": "To increase the number of parameters in the network."},
+        {"id": "B", "text": "To reduce the spatial dimensions (width and height) of the input data."},
+        {"id": "C", "text": "To convert an image from RGB to grayscale."},
+        {"id": "D", "text": "To store the model weights during training."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Pooling (like Max Pooling) reduces the spatial size of the representation to reduce the amount of parameters and computation in the network, and to control overfitting.",
+      "category": "Architecture"
+    },
+    {
+      "id": 12,
+      "text": "In Computer Vision, what is 'Transfer Learning'?",
+      "options": [
+        {"id": "A", "text": "Moving data from one hard drive to another during training."},
+        {"id": "B", "text": "Using a pre-trained model on a new, related task."},
+        {"id": "C", "text": "The process of converting a model from Python to C++."},
+        {"id": "D", "text": "Training a model from scratch using only random weights."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Transfer learning involves taking a model trained on a large dataset (like ImageNet) and fine-tuning it for a specific, often smaller, dataset.",
+      "category": "Advanced CV"
+    }
+  ],
+  "Generative AI": [
+    {
+      "id": 13,
+      "text": "In Large Language Models, what does 'Hallucination' refer to?",
+      "options": [
+        {"id": "A", "text": "The model processing data faster than expected."},
+        {"id": "B", "text": "The model generating factually incorrect or nonsensical information confidently."},
+        {"id": "C", "text": "The model refusing to answer a prompt due to safety filters."},
+        {"id": "D", "text": "The model's ability to generate images from text."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Hallucination is a phenomenon where the AI generates text that sounds plausible but is factually incorrect or unsupported by the training data.",
+      "category": "Model Reliability"
+    },
+    {
+      "id": 14,
+      "text": "How does the 'Temperature' parameter affect the output of a generative model?",
+      "options": [
+        {"id": "A", "text": "It controls the physical heat of the server GPU."},
+        {"id": "B", "text": "It adjusts the randomness of the generated text; higher values lead to more creative output."},
+        {"id": "C", "text": "It sets the maximum length of the generated response."},
+        {"id": "D", "text": "It filters out offensive language automatically."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Temperature is a hyperparameter that controls the randomness of predictions. High temperature (e.g., 1.0) makes output more diverse, while low temperature (e.g., 0.1) makes it more deterministic.",
+      "category": "Hyperparameters"
+    },
+    {
+      "id": 15,
+      "text": "What is a 'Diffusion Model' primarily used for in Generative AI?",
+      "options": [
+        {"id": "A", "text": "Calculating the mathematical average of a text document."},
+        {"id": "B", "text": "Generating high-quality images by reversing a noise-adding process."},
+        {"id": "C", "text": "Compressing large files into smaller ZIP archives."},
+        {"id": "D", "text": "Ranking web pages in a search engine."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Diffusion models work by slowly adding noise to an image and then learning to reverse this process to generate clear images from pure noise.",
+      "category": "Image Generation"
+    },
+    {
+      "id": 16,
+      "text": "What is 'Few-Shot Prompting'?",
+      "options": [
+        {"id": "A", "text": "Giving the model only one attempt to answer a question."},
+        {"id": "B", "text": "Providing the model with a few examples of the task within the prompt itself."},
+        {"id": "C", "text": "Training a model for only a few seconds."},
+        {"id": "D", "text": "Using a very short prompt of less than three words."}
+      ],
+      "correctOptionId": "B",
+      "explanation": "Few-shot prompting is a technique where the user provides a small number of examples in the prompt to show the model how to perform a specific task.",
+      "category": "Prompt Engineering"
+    }
+  ]
+}

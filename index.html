@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clean Focus AI Assessment</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-page": "var(--bg-page)",
+                        "surface": "var(--surface)",
+                        "text-main": "var(--text-main)",
+                        "text-muted": "var(--text-muted)",
+                        "border-subtle": "var(--border-subtle)",
+                        "action": "var(--action)",
+                        "action-hover": "var(--action-hover)",
+                        "primary": "#11d4a4",
+                        "success-bg": "var(--success-bg)",
+                        "success-text": "var(--success-text)",
+                        "error-bg": "var(--error-bg)",
+                        "error-text": "var(--error-text)",
+                    },
+                    fontFamily: {
+                        serif: ["Fraunces", "serif"],
+                        sans: ["Inter", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-page: #FAFAF9;
+            --surface: #FFFFFF;
+            --text-main: #1C1917;
+            --text-muted: #78716C;
+            --border-subtle: #E7E5E4;
+            --action: #44403C;
+            --action-hover: #292524;
+            --success-bg: #D1FAE5;
+            --success-text: #065F46;
+            --error-bg: #FFE4E6;
+            --error-text: #9F1239;
+        }
+
+        .dark {
+            --bg-page: #0C0A09;
+            --surface: #1C1917;
+            --text-main: #FAFAF9;
+            --text-muted: #A8A29E;
+            --border-subtle: #292524;
+            --action: #D6D3D1;
+            --action-hover: #F5F5F4;
+            --success-bg: #064E3B;
+            --success-text: #6EE7B7;
+            --error-bg: #4C0519;
+            --error-text: #FDA4AF;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-page); 
+            color: var(--text-main);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        h1, h2, h3, .font-serif { font-family: 'Fraunces', serif; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        
+        /* Smooth transitions for common elements */
+        nav, main, footer, button, input, div {
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+<body class="min-h-screen">
+    <div id="root"></div>
+</body>
+</html>
